@@ -9,8 +9,10 @@ const ajax = ()=> {
         response.forEach(data => {
         const template = `
             <article class="article">
-            <div class="" style="height: 200px;">${data.image}</div>
+            <div class="" style="height: 200px;">${data.image}
             <img src="${data.image}" alt ="Photo de ${data.title}
+            </div>
+            
             <div class="article-title ">${data.title}</div>
             <div class="article-subtitle ">${data.title2}</div>
             <div class="article-content ">${data.content}</div>
@@ -24,6 +26,6 @@ const ajax = ()=> {
 }
 setTimeout(e=>{
     ajax()
-},5000) // Simuler une requete lente de 5sec
+},1000) // Simuler une requete lente de 5sec
 
 
